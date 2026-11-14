@@ -34,9 +34,9 @@ export async function researchLead(args: {
   ].join("\n");
 
   const res = await ai.models.generateContent({
-    model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+    model: process.env.GEMINI_MODEL || "gemini-3.5-flash",
     contents: prompt,
-    config: { responseMimeType: "application/json", temperature: 0.3 },
+    config: { responseMimeType: "application/json", temperature: 0.3, httpOptions: { timeout: 25000 } },
   });
   return researchSchema.parse(JSON.parse(res.text ?? "{}"));
 }
