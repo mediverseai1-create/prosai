@@ -5,7 +5,7 @@ export const metadata = { title: "Pricing" };
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16">
+    <div className="mx-auto max-w-6xl px-4 pb-16 pt-36">
       <h1 className="text-4xl font-bold tracking-tight">Pricing that scales with your volume</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Actions measure the work done: {COSTS.enrichStep} per row per enrichment step, {COSTS.aiResearch} per row of AI research. Failed runs are not charged.
