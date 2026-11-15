@@ -23,7 +23,7 @@ export default function Page() {
               <p className="mt-2 text-sm text-muted">{p.blurb}</p>
               <ul className="mt-4 flex-1 space-y-2 text-sm">{p.features.map((f) => <li key={f}>✓ {f}</li>)}</ul>
               <Link href="/signup" className={`btn mt-6 ${id === "growth" ? "btn-accent" : "btn-ghost"}`}>
-                {id === "free" ? "Start free" : id === "enterprise" ? "Talk to us" : `Choose ${p.name}`}
+                {id === "free" ? "Start free" : `Choose ${p.name}`}
               </Link>
             </section>
           );

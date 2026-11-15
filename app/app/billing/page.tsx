@@ -16,7 +16,7 @@ export default async function Page() {
   const ctx = await requireContext();
   const used = await creditsUsed(ctx.org.id);
   const pct = Math.min(100, Math.round((used / ctx.plan.actions) * 100));
-  const upgrades: PlanId[] = ["launch", "growth"];
+  const upgrades: PlanId[] = ["launch", "growth", "enterprise"];
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tight">Billing &amp; usage</h1>
